@@ -45,6 +45,8 @@ if url:
     text = get_text_from_url(url)  # 调用函数获取并清理文本内容
 
 
+    st.subheader("抓取的文本内容")
+    st.text_area("文本内容", value=text, height=300)  # 使用text_area显示文本，并设置高度
 
     word_counts = word_frequency(text)  # 对文本进行分词并统计词频
     # 用户可以选择过滤低频词
